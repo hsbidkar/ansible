@@ -1,0 +1,12 @@
+---
+- name: MOTD DEMO
+  hosts: all
+  tasks:
+  - name: Copy TEXT
+    become: yes
+    ansible.builtin.copy:
+      src: ~/HSB.txt 
+      dest: /etc/motd
+      owner: root
+      group: root
+      mode: 0644

@@ -1,0 +1,10 @@
+---
+- name: Download BTC price
+  hosts: ubuntu
+  tasks:
+  - name: Get_url
+    become: yes
+    ansible.builtin.get_url:
+      url: https://api.coindesk.com/v1/bpi/currentprice.json
+      dest: /var/www/html/index.html
+      mode: '0644'

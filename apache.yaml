@@ -1,0 +1,15 @@
+---
+- name: Download BTC price and display on Website
+  hosts: ubuntu
+  tasks:
+  - name: Get_url
+    ansible.builtin.get_url:
+      url: https://api.coindesk.com/v1/bpi/currentprice.json
+      dest: ~/btc1.json
+      mode: '0640'
+  - name: install apache
+    become: True
+    apt:
+      name: apache2
+      state: latest
+  

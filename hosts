@@ -1,0 +1,19 @@
+[ubuntu]
+u1 ansible_host=35.167.143.50
+# u2 ansible_host=54.212.164.17
+# u3 ansible_host=54.189.220.59
+# u4 ansible_host=35.155.238.132
+# u5 ansible_host=52.27.50.11
+
+#[ubuntu:vars]
+#ansible_user=ubuntu
+
+[redhat]
+r1 ansible_host=100.21.87.228
+# r2 ansible_host=35.164.62.220
+# r3 ansible_host=44.224.250.113
+# r4 ansible_host=35.163.230.14
+# r5 ansible_host=52.26.255.2
+
+[redhat:vars]
+ansible_user=ec2-user
