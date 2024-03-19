@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: "Create users"
+      include_tasks : create.yaml
+      loop:
+        - jane
+        - jim
+        - jil

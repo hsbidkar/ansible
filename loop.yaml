@@ -1,0 +1,17 @@
+---
+- name: Loop DEMO
+  hosts: all
+  tasks:
+    - name: Show distribution
+      debug:
+        var: ansible_distribution      
+    - name: Install using apt
+      when: ansible_distribution == "Ubuntu"
+      become: True
+      apt:
+        name: nano
+    - name: Install using yum
+      when: ansible_distribution == "RedHat"
+      become: True
+      yum:
+        name: nano
