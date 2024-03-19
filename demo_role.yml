@@ -1,0 +1,4 @@
+---
+- hosts: all
+  roles:
+    - empty_role
